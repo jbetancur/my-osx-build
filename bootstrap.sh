@@ -25,3 +25,9 @@ echo 'Running Ansible to configure Dev machine'
 if [[ -x `which ansible` ]]; then
     ansible-playbook -i hosts main.yaml --ask-sudo-pass
 fi
+
+echo 'Installing XCode Tools'
+
+if [[ !-z $(xcode-select -p) ]];then
+  xcode-select --install
+fi
