@@ -1,10 +1,10 @@
 ---
-- name: Install NodeJS
+- name: Installing NodeJS
   homebrew: name={{ item }} state=present update_homebrew=yes upgrade_all=yes
   with_items:
-    -node
+    - node
 
-- name: Install global npm packages
+- name: Installing global npm packages
   npm: name={{ item }} global=yes state=present
   with_items:
     - esformatter
