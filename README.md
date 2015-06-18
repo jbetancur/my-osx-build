@@ -7,5 +7,5 @@ Run and wait...
 ```
 
 ## Known Issues
-* Xcode tools requries manual interventions
+* Xcode tools requires manual interventions
 * You will be occasionally prompted to enter credentials
