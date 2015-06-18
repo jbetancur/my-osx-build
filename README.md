@@ -14,9 +14,11 @@ If you are running this Playbook on a fresh OSX install
 
 ## Inventory
 
-### Pre Requisites (insatlld by bootstrap.sh)
+### Pre Requisites (installed by bootstrap.sh)
 
-* xcode tools
+* xcode-select (xcode tools)
+* pip
+* ansible
 * homebrew (taps and cask)
 
 ### common
@@ -40,29 +42,29 @@ If you are running this Playbook on a fresh OSX install
 
 ### Productivity Applications
 
-* google*chrome
+* google-chrome
 * virtualbox
-* microsoft*office
+* microsoft-office
 * firefox
-* google*hangouts
-* google*drive
+* google-hangouts
+* google-drive
 * vlc
 * hipchat
 * flowdock
 * unrarx
 * alfred
-* flash*player
-* vmware*fusion
+* flash-player
+* vmware-fusion
 
 ### Developer tools
 
-* sublime*text3
+* sublime-text3
 * atom
-* eclipse*java
+* eclipse-java
 * postgres
 * boot2docker
 * vagrant
-* vagrant*manager
+* vagrant-manager
 * sourcetree
 * cyberduck
 * python
@@ -81,5 +83,5 @@ If you are running this Playbook on a fresh OSX install
 * yo
 * babel
 * vtop
-* node*debug
-* grunt*cli
+* node-debug
+* grunt-cli
