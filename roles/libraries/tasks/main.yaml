@@ -1,0 +1,15 @@
+---
+- name: Installing libraries
+  homebrew: name={{ item }} state=present update_homebrew=yes upgrade_all=yes
+  with_items:
+    - git
+    - curl
+    - wget
+    - ssh-copy-id
+    - vim
+    - maven
+    - ant
+    - tree
+    - watch
+    - colordiff
+    - packer

@@ -1,0 +1,17 @@
+---
+- name: Install NodeJS
+  homebrew: name={{ item }} state=present update_homebrew=yes upgrade_all=yes
+  with_items:
+    -node
+
+- name: Install global npm packages
+  npm: name={{ item }} global=yes state=present
+  with_items:
+    - esformatter
+    - eslint
+    - gulp
+    - yo
+    - babel
+    - vtop
+    - node-debug
+    - grunt-cli

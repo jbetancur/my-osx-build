@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    casks_install_dir: '--appdir=/Applications'
+  roles:
+    - common
+    - libraries
+    - productivity
+    - developer-tools
+    - nodejs

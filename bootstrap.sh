@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-chmod -x ./hosts
+chmod -x ./inventory
 
 if [[ -z $(xcode-select -p) ]];then
   echo "Info   | Install   | xcode tools"
@@ -26,5 +26,5 @@ fi
 
 if [[ -x `which ansible` ]]; then
     echo 'Info  | Running Ansible to configure Dev machine'
-    ansible-playbook -i hosts main.yaml # --ask-sudo-pass
+    ansible-playbook -i inventory site.yaml # --ask-sudo-pass
 fi
