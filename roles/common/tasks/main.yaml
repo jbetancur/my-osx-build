@@ -15,6 +15,7 @@
   with_items:
     - java7
     - xquartz
+  sudo: yes
 
 - name: Installing common Gems
   gem: name={{ item }} state=present

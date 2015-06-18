@@ -12,7 +12,8 @@
   if [[ -z $(xcode-select -p) ]];then
     echo "Info   | Install   | xcode tools"
     xcode-select --install
-    sleep 5
+    # Not fool proof - in case xcode tools installer is slow to start
+    sleep 15
     xtoolsPid=`ps aux | awk '/[I]nstall Command Line Developer Tools.app/ {print $2}'`
     while (ps -p $xtoolsPid > /dev/null)
       do sleep 1
