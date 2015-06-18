@@ -7,12 +7,36 @@
         - wget
         - curl
         - vim
+        - maven
+        - ant
+        - brew-cask
+        - tree
+        - watch
+        - colordiff
+        - node
+    # - name: Install HomeBrew Cask
+    #   homebrew_tap: tap=caskroom/cask state=present
+    #   with_items:
+    #     - caskroom/cask/brew-cask
+
     - name: Install Gems
       gem: name={{ item }} state=present
       with_items:
         - sass
-    - name: Install ancillary programs
-      homebrew_cask: name={{ item }} state=present
+
+    - name: Install homebrew cask packages
+      homebrew_cask: name={{ item }} state=installed
       with_items:
         - google-chrome
+        - google-hangouts
+        - atom
+        - sublime-text3
+        - postgres
+        - boot2docker
+        - vagrant
         - virtualbox
+        - vlc
+        - hipchat
+        - flowdock
+        - sourcetree
+        - cyberduck

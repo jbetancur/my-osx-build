@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
+echo 'Installing Homebrew'
+# Download and install Homebrew
+if [[ ! -x /usr/local/bin/brew ]]; then
+    echo "Info   | Install   | homebrew"
+    sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 echo 'Installing Ansible'
 
 # prefer pip for installing python packages over the older easy_install
