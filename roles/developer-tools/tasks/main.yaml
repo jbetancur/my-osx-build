@@ -4,8 +4,8 @@
   environment:
     HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}"
   with_items:
-    - atom
     - sublime-text3
+    - atom
     - eclipse-java
     - postgres
     - boot2docker
@@ -18,3 +18,5 @@
     - mou
     - github
     - iterm2
+  #For items that require sudo
+  sudo: yes

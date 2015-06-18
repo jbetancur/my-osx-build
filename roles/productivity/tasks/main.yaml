@@ -5,6 +5,8 @@
     HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}"
   with_items:
     - google-chrome
+    - virtualbox
+    - microsoft-office
     - firefox
     - google-hangouts
     - google-drive
@@ -14,6 +16,6 @@
     - unrarx
     - alfred
     - flash-player
-    - virtualbox
     - vmware-fusion
-    - microsoft-office
+  #For items that require sudo
+  sudo: yes

@@ -1,22 +1,22 @@
 ---
-- name: Install homebrew tap dependencies
+- name: Installing homebrew taps
   homebrew_tap: name={{ item }} state=present
   with_items:
     - caskroom/cask
     - caskroom/versions
 
-- name: Install dependencies via homebrew
+- name: Installing homebrew cask
   homebrew: name={{ item }} state=present
   with_items:
     - brew-cask
 
-- name: Install Dependencies via homebrew cask
+- name: Installing common dependencies
   homebrew_cask: name={{ item }} state=present
   with_items:
     - java7
     - xquartz
 
-- name: Install Gems
+- name: Installing common Gems
   gem: name={{ item }} state=present
   with_items:
     - sass
