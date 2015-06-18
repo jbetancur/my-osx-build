@@ -2,23 +2,20 @@
 - hosts: all
   tasks:
     - name: Install HomeBrew Tap Dependencies
-      homebrew_tap: tap=caskroom/cask state=present
+      homebrew_tap: tap=caskroom/cask state=present, caskroom/versions state=present
+
+    - name: Install Dependencies via HomeBrew
+      homebrew: name={{ item }} state=present
       with_items:
-        - caskroom/cask/brew-cask
-        - caskroom/versions
-        - caskroom/homebrew-versions
+        - brew-cask
+        - git
+        - curl
+        - wget
 
     - name: Install Dependencies via HomeBrew Cask
       homebrew_cask: name={{ item }} state=installed
       with_items:
         - java7
-
-    - name: Install Dependencies via HomeBrew
-      homebrew: name={{ item }} state=present
-      with_items:
-        - git
-        - curl
-        - wget
 
     - name: Install libraries with homebrew
       homebrew: name={{ item }} state=present
