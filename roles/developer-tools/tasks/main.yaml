@@ -2,7 +2,7 @@
 - name: Installing developer tools
   homebrew_cask: name={{ item }} state=present
   environment:
-    HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}/22"
+    HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}"
   with_items:
     - atom
     - sublime-text3

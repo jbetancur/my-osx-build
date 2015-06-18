@@ -26,5 +26,5 @@ fi
 
 if [[ -x `which ansible` ]]; then
     echo 'Info  | Running Ansible to configure Dev machine'
-    ansible-playbook -i inventory site.yaml # --ask-sudo-pass
+    ansible-playbook -i inventory site.yaml --ask-sudo-pass
 fi

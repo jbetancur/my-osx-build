@@ -2,7 +2,7 @@
 - name: Installing productivity applications
   homebrew_cask: name={{ item }} state=present
   environment:
-    HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}/22"
+    HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}"
   with_items:
     - google-chrome
     - firefox
