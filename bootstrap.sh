@@ -9,10 +9,6 @@ if [[ ! -x /usr/local/bin/brew ]]; then
     echo "Info   | Install   | homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
-    brew install caskroom/cask/brew-cask
-    brew tap caskroom/cask
-    brew tap caskroom/versions
-    brew tap caskroom/homebrew-versions
 fi
 
 echo 'Installing Ansible'
