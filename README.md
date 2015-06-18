@@ -8,4 +8,4 @@ Run and wait...
 
 ## Known Issues
 * Xcode tools requires manual interventions
-* You will be occasionally prompted to enter credentials
+* On first run you may be prompted several times for sudo credentials
