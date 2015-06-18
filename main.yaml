@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: Install HomeBrew Tap Dependencies
-      homebrew_tap: tap=caskroom/cask state=present, caskroom/versions state=present
+      homebrew_tap: tap=caskroom/cask,caskroom/versions state=present
 
     - name: Install Dependencies via HomeBrew
       homebrew: name={{ item }} state=present
