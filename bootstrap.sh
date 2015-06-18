@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+chmod -x ./hosts
+
 echo 'Installing Homebrew'
 # Download and install Homebrew
 if [[ ! -x /usr/local/bin/brew ]]; then
