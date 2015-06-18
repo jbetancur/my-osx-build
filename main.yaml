@@ -32,6 +32,8 @@
 
     - name: Install homebrew cask packages
       homebrew_cask: name={{ item }} state=installed
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
       with_items:
         - google-chrome
         - google-hangouts
