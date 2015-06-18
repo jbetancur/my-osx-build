@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+    - name: Install libraries with homebrew
+      homebrew: name={{ item }} state=present
+      with_items:
+        - wget
+        - curl
+        - vim
+    - name: Install Gems
+      gem: name={{ item }} state=present
+      with_items:
+        - sass
+    - name: Install ancillary programs
+      homebrew_cask: name={{ item }} state=present
+      with_items:
+        - google-chrome
+        - virtualbox
