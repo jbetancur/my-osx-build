@@ -49,6 +49,7 @@
         - cyberduck
         - python
         - go
+        - unrarx
 
     - name: Install Gems
       gem: name={{ item }} state=present
