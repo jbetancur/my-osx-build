@@ -8,7 +8,7 @@
   SUPPORTED_OSX_VERSION=10
   ACTUAL_OSX_VERSION=$(sw_vers -productVersion | awk -F "." '{print $2}')
 
-  if [ "$ACTUAL_OSX_VERSION" -lt $SUPPORTED_OSX_VERSION ]; then
+  if [ "$ACTUAL_OSX_VERSION" -lt "$SUPPORTED_OSX_VERSION" ]; then
     echo "You are running OSX version $ACTUAL_OSX_VERSION. You must be running OSX version $SUPPORTED_OSX_VERSION or higher"
     exit 1
   fi
