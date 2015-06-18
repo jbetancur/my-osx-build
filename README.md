@@ -1,5 +1,5 @@
 ## OSX Environment Build using Ansible
-Run and wait...
+Run:
 
 ```
 ./bootstrap.sh
@@ -14,7 +14,7 @@ If you are running this Playbook on a fresh OSX install
 
 ## Inventory
 
-### Pre Requisites (installed by bootstrap.sh)
+### Pre Requisites (installed by ./bootstrap.sh)
 
 * xcode-select (xcode tools)
 * pip
