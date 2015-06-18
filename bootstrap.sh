@@ -3,6 +3,12 @@ set -e
 
 chmod -x ./hosts
 
+echo 'Installing XCode Tools'
+
+if [[ -z $(xcode-select -p) ]];then
+  xcode-select --install
+fi
+
 echo 'Installing Homebrew'
 # Download and install Homebrew
 if [[ ! -x /usr/local/bin/brew ]]; then
@@ -27,10 +33,4 @@ echo 'Running Ansible to configure Dev machine'
 
 if [[ -x `which ansible` ]]; then
     ansible-playbook -i hosts main.yaml --ask-sudo-pass
-fi
-
-echo 'Installing XCode Tools'
-
-if [[ !-z $(xcode-select -p) ]];then
-  xcode-select --install
 fi

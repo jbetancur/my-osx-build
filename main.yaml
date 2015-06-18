@@ -8,9 +8,6 @@
       homebrew: name={{ item }} state=present
       with_items:
         - brew-cask
-        - git
-        - curl
-        - wget
 
     - name: Install Dependencies via HomeBrew Cask
       homebrew_cask: name={{ item }} state=installed
@@ -20,6 +17,9 @@
     - name: Install libraries with homebrew
       homebrew: name={{ item }} state=present
       with_items:
+        - git
+        - curl
+        - wget
         - ssh-copy-id
         - vim
         - maven
@@ -29,11 +29,6 @@
         - colordiff
         - node
         - packer
-
-    - name: Install Gems
-      gem: name={{ item }} state=present
-      with_items:
-        - sass
 
     - name: Install homebrew cask packages
       homebrew_cask: name={{ item }} state=installed
@@ -53,3 +48,8 @@
         - cyberduck
         - python
         - go
+
+    - name: Install Gems
+      gem: name={{ item }} state=present
+      with_items:
+        - sass
