@@ -13,7 +13,7 @@ echo 'Installing Ansible'
 # prefer pip for installing python packages over the older easy_install
 #
 if [[ ! -x `which pip` ]]; then
-    easy_install pip
+    sudo easy_install pip
 fi
 
 if [[ -x `which pip` && ! -x `which ansible` ]]; then

@@ -1,15 +1,26 @@
 ---
 - hosts: all
   tasks:
+    - name: Install Dependencies via HomeBrew
+      homebrew: name={{ item }} state=present
+      with_items:
+        - brew-cask
+        - git
+        - curl
+        - wget
+
+    - name: Install Dependencies via HomeBrew Cask
+      homebrew_cask: name={{ item }} state=installed
+      with_items:
+        - java7
+
     - name: Install libraries with homebrew
       homebrew: name={{ item }} state=present
       with_items:
-        - wget
-        - curl
+        - ssh-copy-id
         - vim
         - maven
         - ant
-        - brew-cask
         - tree
         - watch
         - colordiff
@@ -34,8 +45,6 @@
         - sublime-text3
         - postgres
         - boot2docker
-        - docker
-        - docker-completion
         - vagrant
         - virtualbox
         - vlc
