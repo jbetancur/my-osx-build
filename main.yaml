@@ -1,6 +1,10 @@
 ---
 - hosts: all
   tasks:
+    - name: Install HomeBrew Tap Dependencies
+      homebrew_tap: tap=caskroom/cask state=present
+      with_items:
+        - caskroom/cask/brew-cask
     - name: Install Dependencies via HomeBrew
       homebrew: name={{ item }} state=present
       with_items:
@@ -26,10 +30,6 @@
         - colordiff
         - node
         - packer
-    # - name: Install HomeBrew Cask
-    #   homebrew_tap: tap=caskroom/cask state=present
-    #   with_items:
-    #     - caskroom/cask/brew-cask
 
     - name: Install Gems
       gem: name={{ item }} state=present
