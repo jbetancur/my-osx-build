@@ -10,6 +10,7 @@
     - postgres
     - boot2docker
     - vagrant
+    - vagrant-manager
     - sourcetree
     - cyberduck
     - python
