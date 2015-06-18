@@ -32,5 +32,5 @@ fi
 echo 'Running Ansible to configure Dev machine'
 
 if [[ -x `which ansible` ]]; then
-    ansible-playbook -i hosts main.yaml --ask-sudo-pass
+    ansible-playbook -i hosts main.yaml # --ask-sudo-pass
 fi

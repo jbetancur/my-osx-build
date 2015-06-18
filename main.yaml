@@ -1,21 +1,21 @@
 ---
 - hosts: all
   tasks:
-    - name: Install HomeBrew Tap Dependencies
+    - name: Install homebrew tap dependencies
       homebrew_tap: tap=caskroom/cask,caskroom/versions state=present
 
-    - name: Install Dependencies via HomeBrew
+    - name: Install dependencies via homebrew
       homebrew: name={{ item }} state=present
       with_items:
         - brew-cask
 
-    - name: Install Dependencies via HomeBrew Cask
+    - name: Install Dependencies via homebrew cask
       homebrew_cask: name={{ item }} state=installed
       with_items:
         - java7
 
     - name: Install libraries with homebrew
-      homebrew: name={{ item }} state=present
+      homebrew: name={{ item }} state=present update_homebrew=yes upgrade_all=yes
       with_items:
         - git
         - curl
@@ -37,6 +37,7 @@
         - google-hangouts
         - atom
         - sublime-text3
+        - eclipse-java
         - postgres
         - boot2docker
         - vagrant
@@ -53,3 +54,14 @@
       gem: name={{ item }} state=present
       with_items:
         - sass
+
+    - name: Install global npm packages
+      npm: name={{ item }} global=yes
+      with_items:
+        - esformatter
+        - eslint
+        - gulp
+        - yo
+        - babel
+        - vtop
+        - node-debug
