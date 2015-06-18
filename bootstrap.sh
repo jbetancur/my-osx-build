@@ -1,4 +1,8 @@
   #!/usr/bin/env bash
+
+  # Author: John Betancur
+  # Distribute freely
+
   set -e
 
   SUPPORTED_OSX_VERSION=10
