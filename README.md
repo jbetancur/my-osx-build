@@ -31,7 +31,7 @@ If you are running this Playbook on a fresh OSX install
 * git
 * curl
 * wget
-* ssh*copy*id
+* ssh-copy-id
 * vim
 * maven
 * ant
