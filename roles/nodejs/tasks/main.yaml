@@ -1,8 +1,16 @@
 ---
-- name: Installing NodeJS
-  homebrew: name={{ item }} state=present update_homebrew=yes upgrade_all=yes
+- name: Installing nodejs
+  homebrew_cask: name={{ item }} state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}"
   with_items:
     - node
+- name: Modifying $PATH
+  lineinfile:
+    dest: ~/.bash_profile
+    line: "{{ item.line }}"
+  with_items:
+    - { line: 'export PATH=/usr/local/bin:$PATH' }
 
 - name: Installing global npm packages
   npm: name={{ item }} global=yes state=present
@@ -15,3 +23,6 @@
     - vtop
     - node-debug
     - grunt-cli
+    - jspm
+    - karma-cli
+    - webpack

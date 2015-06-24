@@ -13,3 +13,8 @@
     - watch
     - colordiff
     - packer
+
+- name: Git configuration
+  command: "{{ item }}"
+  with_items:
+    - 'git config --global color.ui true'

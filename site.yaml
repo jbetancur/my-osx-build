@@ -3,6 +3,7 @@
   vars:
     casks_install_dir: '--appdir=/Applications'
   roles:
+    - profile
     - common
     - libraries
     - productivity
