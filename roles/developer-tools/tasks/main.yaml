@@ -4,8 +4,8 @@
   environment:
     HOMEBREW_CASK_OPTS: "{{ casks_install_dir }}"
   with_items:
-    - sublime-text3
     - atom
+    - sublime-text3
     - eclipse-java
     - postgres
     - boot2docker
@@ -21,3 +21,13 @@
     - iterm2
   #For items that require sudo
   sudo: yes
+
+- name: Atom configuration
+  command: "{{ item }}"
+  with_items:
+    - apm install linter
+    - apm install linter-eslint
+    - apm install linter-scss-lint
+    - apm install esformatter
+    - apm install floobits
+    - apm install seti-ui

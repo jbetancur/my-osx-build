@@ -72,7 +72,13 @@ Modify ~/.bash_profile with goodies
 ### Developer tools
 
 * sublime-text3
-* atom
+* atom + packages
+  * esformatter
+  * linter
+  * linter-eslint
+  * linter-scss-lint
+  * floobits
+  * seti-ui
 * eclipse-java
 * postgres
 * boot2docker
