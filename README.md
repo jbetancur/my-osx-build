@@ -24,6 +24,10 @@ If you are running this Playbook on a fresh OSX install
 * ansible
 * homebrew (taps and cask)
 
+### profile
+
+* modify ~/.bash_profile with goodies
+
 ### common
 
 * java7
