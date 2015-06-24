@@ -8,8 +8,8 @@ Run:
 ## Known Issues
 If you are running this Playbook on a fresh OSX install
 
-* When prompted for Xcode tools installs - it will manual intervention
-* You will be prompted several times for sudo credentials as pre*reqisites are being installed
+* When prompted for Xcode tools installs - it will require manual intervention
+* You will be prompted several times for sudo credentials as pre-reqisites are being installed
 
 ## TODO
 
@@ -25,8 +25,14 @@ If you are running this Playbook on a fresh OSX install
 * homebrew (taps and cask)
 
 ### profile
+Modify ~/.bash_profile with goodies
 
-* modify ~/.bash_profile with goodies
+* { line: 'export JAVA_HOME=$(/usr/libexec/java_home)' }
+* { line: 'export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "' }
+* { line: export CLICOLOR=1 }
+* { line: export LSCOLORS=ExFxBxDxCxegedabagacad }
+* { line: alias ls='ls -GFh' }
+* { line: alias lsd='ls -GFhlart' }
 
 ### common
 
@@ -92,3 +98,6 @@ If you are running this Playbook on a fresh OSX install
 * vtop
 * node-debug
 * grunt-cli
+* jspm
+* karma-cli
+* webpack
