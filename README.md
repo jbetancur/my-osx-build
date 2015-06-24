@@ -38,7 +38,9 @@ Modify ~/.bash_profile with goodies
 
 * java7
 * xquartz
-
+* gems
+  * sass
+  * scss-lint
 ### Libraries
 
 * git
