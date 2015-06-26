@@ -5,8 +5,13 @@
     line: "{{ item.line }}"
   with_items:
     - { line: 'export JAVA_HOME=$(/usr/libexec/java_home)' }
-    - { line: 'export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "' }
+    - { line: '\n#General Terminal Highlighting' }
+    - { line: 'export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]"' }
     - { line: export CLICOLOR=1 }
     - { line: export LSCOLORS=ExFxBxDxCxegedabagacad }
+    - { line: '\n#Git Branch Highlighting' }
+    - { line: 'export PS1="$PS1\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "' }
+    - { line: 'parse_git_branch () { git branch 2> /dev/null | sed -e ''/^[^*]/d'' -e ''s/* \(.*\)/ (\1)/''; }' }
+    - { line: '\n#Aliases' }
     - { line: alias ls='ls -GFh' }
-    - { line: alias lsd='ls -GFhlart' }
+    - { line: alias lsd='ls -GFhlart'}

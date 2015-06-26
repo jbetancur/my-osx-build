@@ -26,13 +26,9 @@ If you are running this Playbook on a fresh OSX install
 
 ### profile
 Modify ~/.bash_profile with goodies
-
-* { line: 'export JAVA_HOME=$(/usr/libexec/java_home)' }
-* { line: 'export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "' }
-* { line: export CLICOLOR=1 }
-* { line: export LSCOLORS=ExFxBxDxCxegedabagacad }
-* { line: alias ls='ls -GFh' }
-* { line: alias lsd='ls -GFhlart' }
+* highlghting
+* aliases
+* git branching
 
 ### common
 
