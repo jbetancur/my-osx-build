@@ -28,4 +28,3 @@
     - karma-cli
     - webpack
     - webpack-dev-server
-    - travis

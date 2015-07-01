@@ -33,3 +33,4 @@
     - apm install floobits
     - apm install seti-ui
     - apm install term2
+    - apm install atom-jasmine
