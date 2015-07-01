@@ -90,6 +90,7 @@ Modify ~/.bash_profile with goodies
 * mou
 * github
 * iterm2
+* heroku-toolbelt
 
 ### NodeJS Environment & NPM Apps
 

@@ -19,6 +19,7 @@
     - mou
     - github
     - iterm2
+    - heroku-toolbelt
   #For items that require sudo
   sudo: yes
 
@@ -31,3 +32,4 @@
     - apm install esformatter
     - apm install floobits
     - apm install seti-ui
+    - apm install term2

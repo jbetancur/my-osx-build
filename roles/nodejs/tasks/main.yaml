@@ -24,5 +24,8 @@
     - node-debug
     - grunt-cli
     - jspm
+    - karma
     - karma-cli
     - webpack
+    - webpack-dev-server
+    - travis
