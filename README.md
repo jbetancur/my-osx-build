@@ -29,6 +29,7 @@ Modify ~/.bash_profile with goodies
 * highlghting
 * aliases
 * git branching
+* git-completions and prompt (from git hub)
 
 ### common
 

@@ -2,9 +2,10 @@
 - hosts: all
   vars:
     casks_install_dir: '--appdir=/Applications'
+    git_tools_install_dir: '~/'
   roles:
-    - profile
     - common
+    - profile
     - libraries
     - productivity
     - developer-tools

@@ -5,13 +5,17 @@
     line: "{{ item.line }}"
   with_items:
     - { line: 'export JAVA_HOME=$(/usr/libexec/java_home)' }
-    - { line: '\n#General Terminal Highlighting' }
-    - { line: 'export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]"' }
-    - { line: export CLICOLOR=1 }
-    - { line: export LSCOLORS=ExFxBxDxCxegedabagacad }
-    - { line: '\n#Git Branch Highlighting' }
-    - { line: 'export PS1="$PS1\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "' }
-    - { line: 'parse_git_branch () { git branch 2> /dev/null | sed -e ''/^[^*]/d'' -e ''s/* \(.*\)/ (\1)/''; }' }
-    - { line: '\n#Aliases' }
+    # - { line: '\n#General Terminal Highlighting' }
+    # - { line: 'export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]"' }
+    # - { line: export CLICOLOR=1 }
+    # - { line: export LSCOLORS=ExFxBxDxCxegedabagacad }
+    # - { line: '\n#Git Branch Highlighting' }
+    # - { line: 'export PS1="$PS1\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "' }
+    # - { line: 'parse_git_branch () { git branch 2> /dev/null | sed -e ''/^[^*]/d'' -e ''s/* \(.*\)/ (\1)/''; }' }
+    # - { line: '\n#Aliases' }
     - { line: alias ls='ls -GFh' }
     - { line: alias lsd='ls -GFhlart'}
+    # - { line: '\n#Git Completion' }
+    - { line: 'source ~/.git-prompt.sh'}
+    - { line: 'source ~/.git-completion.bash'}
+    - { line: 'PROMPT_COMMAND=''__git_ps1 "\t\[\e[36m\] \u\[\e[0m\]@\[\e[31m\]\h\[\e[0m\](\[\e[36m\]\w\[\e[0m\])" "\\\$ "''' }

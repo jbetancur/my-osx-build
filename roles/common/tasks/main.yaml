@@ -23,3 +23,9 @@
     - sass
     - scss-lint
   sudo: yes
+
+- name: Clone Git Repo for bash completion tools
+  get_url: url=https://raw.github.com/git/git/master/contrib/completion/{{item.file}} dest={{git_tools_install_dir}}/{{item.name}}
+  with_items:
+  - { file: git-prompt.sh, name: .git-prompt.sh }
+  - { file: git-completion.bash, name: .git-completion.bash }
