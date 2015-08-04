@@ -14,8 +14,8 @@
     - hipchat
     - flowdock
     - unrarx
-    - alfred
     - flash-player
     - vmware-fusion
+    - nmap
   #For items that require sudo
   sudo: yes

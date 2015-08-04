@@ -18,3 +18,4 @@
   command: "{{ item }}"
   with_items:
     - 'git config --global color.ui true'
+    - 'git config --global push.default simple'
